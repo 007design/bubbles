@@ -12,12 +12,12 @@ angular.module('app', ['ngAnimate'])
     link: function(scope, elem, attrs, ctrl){
         
       function toRadians (angle) {
-        return (angle * Math.PI) / Math.PI / 360;
+        return angle * Math.PI / 180;
       }
 
       function getPosition(radius, angle){
-        var vals = [ Math.round(radius * Math.cos(2 * Math.PI * toRadians(angle))),
-                      Math.round(radius * Math.sin(2 * Math.PI * toRadians(angle))) ];
+        var vals = [ Math.round(radius * Math.cos(toRadians(angle))),
+                      Math.round(radius * Math.sin(toRadians(angle))) ];
         return vals;  
       }
 
@@ -35,12 +35,12 @@ angular.module('app', ['ngAnimate'])
     restrict: 'A',
     link: function(scope, elem, attrs){
       function toRadians (angle) {
-        return (angle * Math.PI) / Math.PI / 360;
+        return angle * Math.PI / 180;
       }
 
       function getPosition(radius, angle){
-        var vals = [ Math.round(radius * Math.cos(2 * Math.PI * toRadians(angle))),
-                      Math.round(radius * Math.sin(2 * Math.PI * toRadians(angle))) ];
+        var vals = [ Math.round(radius * Math.cos(toRadians(angle))),
+                      Math.round(radius * Math.sin(toRadians(angle))) ];
         return vals;  
       }
 
