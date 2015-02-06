@@ -8,6 +8,7 @@
 # Ignore npm packaging
 /.node_modules
 /node_modules
+/bower_components
 
 
 # Ignore all logfiles and tempfiles.
