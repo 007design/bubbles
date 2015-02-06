@@ -1,0 +1,132 @@
+$blue: #00a9e0;
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.buttons { 
+}
+
+.circles {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.start-button {
+  height: 100px;
+  width: 100px;
+  transition: 2s linear all;
+    
+  
+  &.active {
+    .button {
+      margin: 10px 0 0 10px;
+      height: 80px;
+      width: 80px;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%;
+  transition: 0.5s linear all;
+  transition-timing-function: ease-in-out;
+  
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    height: 0;
+    width: 0;
+  }
+
+  &.ng-hide-add,
+  &.ng-hide-remove.ng-hide-remove-active {
+    height: 100%;
+    width: 100%;
+  }
+  &.ng-hide-add.ng-hide-add-active {
+    height: 0;
+    width: 0;
+  }
+}
+
+.button {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  left: -50%;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid $blue;
+  transition: 0.5s linear all;
+  
+  p {
+    @include align();
+    color: $blue;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+  
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    height: 0;
+    width: 0;
+    font-size: 0;
+    top: 0;
+    left: 0;
+  }
+
+  &.ng-hide-add,
+  &.ng-hide-remove.ng-hide-remove-active {
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    top: -50%;
+    left: -50%;
+  }
+  &.ng-hide-add.ng-hide-add-active {
+    height: 0;
+    width: 0;
+    font-size: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+.line-container {
+  position: absolute;
+}
+
+.line {
+  position: absolute;
+  width: 200px;
+  border-top: 2px solid $blue;
+  transition:0.5s linear all;
+  transition-timing-function: ease-in-out;
+  
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    width: 0;
+  }
+
+  &.ng-hide-add,
+  &.ng-hide-remove.ng-hide-remove-active {
+    width: 200px;
+  }
+  &.ng-hide-add.ng-hide-add-active {
+    width: 0;
+  }
+}

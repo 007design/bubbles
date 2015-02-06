@@ -1,0 +1,6 @@
+{
+  "name": "bubbles",
+  "dependencies": {
+    "jeet.gs": "6.1.2"
+  }
+}

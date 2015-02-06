@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Bubbles Directive with Animation</title>
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+</head>
+<body>
+
+
+  <div class="container" data-ng-app="app" data-ng-controller="buttonCtrl">
+    
+    <div class="buttons">
+      <div class="circles">
+        <div class="circle" ng-show="showButtons" ng-repeat="circle in circles" circle="{{circle}}" ng-animate-children>
+          <div class="line-container" line="{{circle}}"><div class="line" ng-show="showButtons"></div></div>
+          <div class="button" ng-show="showButtons">
+            <p>{{coords}}</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="start-button" data-ng-class="{'active': showButtons}">
+        <div class="circle" ng-click="showButtons = !showButtons"><div class="button"><p>Choose</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.angularjs.org/1.3.10/angular.min.js"></script>
+  <script type="text/javascript" src="https://code.angularjs.org/1.3.10/angular-animate.js"></script>
+  <script type="text/javascript" src="scripts/scripts.js"></script>
+</body>
+</html>

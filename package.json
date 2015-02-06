@@ -1,0 +1,16 @@
+{
+  "name": "bubbles",
+  "version": "1.0.0",
+  "description": "Bubbles Animation",
+  "main": "start_sandbox.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gh.leapfrogonline.com/dbond/bubbles.git"
+  },
+  "author": "Daniel Hinds-Bond <007@007design.com> (http://007design.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.11.2",
+    "node-sass-middleware": "^0.4.0"
+  }
+}
