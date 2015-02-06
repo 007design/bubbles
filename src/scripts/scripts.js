@@ -49,12 +49,10 @@ angular.module('app', ['ngAnimate'])
 
       scope.coords = getPosition(200, attrs.line);
       
-      var rotateAngle = attrs.line >= 180 ? attrs.line : 360-attrs.line * -1;
-      
       $(elem).css({
         'top': scope.coords[1]*-1+'%',
         'left': scope.coords[0]*-1+'%',
-        'transform': 'rotate('+rotateAngle+'deg)'
+        'transform': 'rotate('+attrs.line+'deg)'
       });
     }
   };
