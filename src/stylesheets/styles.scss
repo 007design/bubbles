@@ -1,6 +1,7 @@
 @import '../../bower_components/jeet.gs/scss/jeet/index';
 
 $blue: #00a9e0;
+$size: 100px;
 
 * {
   box-sizing: border-box;
@@ -10,6 +11,7 @@ $blue: #00a9e0;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .buttons { 
@@ -22,8 +24,8 @@ $blue: #00a9e0;
 }
 
 .start-button {
-  height: 100px;
-  width: 100px;
+  height: $size;
+  width: $size;
   transition: 2s linear all;
     
   
@@ -114,7 +116,7 @@ $blue: #00a9e0;
 
 .line {
   position: absolute;
-  width: 200px;
+  width: $size*2;
   border-top: 2px solid $blue;
   transition:0.5s linear all;
   transition-timing-function: ease-in-out;
@@ -126,7 +128,7 @@ $blue: #00a9e0;
 
   &.ng-hide-add,
   &.ng-hide-remove.ng-hide-remove-active {
-    width: 200px;
+    width: $size*2;
   }
   &.ng-hide-add.ng-hide-add-active {
     width: 0;
