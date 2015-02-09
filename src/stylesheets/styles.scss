@@ -1,6 +1,6 @@
 $blue: #00a9e0;
-$size: 50px;
-$radius: 150px;
+$size: 75px;
+$radius: 200px;
 
 * {
   box-sizing: border-box;
@@ -43,8 +43,8 @@ $radius: 150px;
 
 .circle {
   position: absolute;
-  height: $radius - $size;
-  width: $radius - $size;
+  height: $radius;
+  width: $radius;
   top: 0%;
   left: 0%;
   transform-origin: 50% 50%;
@@ -59,8 +59,8 @@ $radius: 150px;
 
   &.ng-hide-add,
   &.ng-hide-remove.ng-hide-remove-active {
-    height: $radius - $size;
-    width: $radius - $size;
+    height: $radius;
+    width: $radius;
   }
   &.ng-hide-add.ng-hide-add-active {
     height: 0;

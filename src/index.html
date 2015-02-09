@@ -6,24 +6,21 @@
 </head>
 <body>
   
+
   <div class="container" data-ng-app="app" data-ng-controller="buttonCtrl">
     
     <div class="buttons">
       <div class="circles">
-        <div class="circle" ng-show="showButtons" ng-repeat="circle in circles" circle="{{circle}}" radius="{{radius}}" ng-animate-children>
-          <div class="line-container" line="{{circle}}" radius="{{radius}}"><div class="line" ng-show="showButtons"></div></div>
+        <div class="circle" ng-show="showButtons" ng-repeat="circle in circles" circle="{{circle}}" ng-animate-children>
+          <div class="line-container" line="{{circle}}"><div class="line" ng-show="showButtons"></div></div>
           <div class="button" ng-show="showButtons">
-            <div class="button-inner"><p>{{coords}}</p></div>
+            <p>{{coords}}</p>
           </div>
         </div>
       </div>
     
       <div class="start-button" data-ng-class="{'active': showButtons}">
-        <div class="circle" ng-click="showButtons = !showButtons">
-          <div class="button">
-            <div class="button-inner"><p>Choose</p></div>
-          </div>
-        </div>
+        <div class="circle" ng-click="showButtons = !showButtons"><div class="button"><p>Choose</p></div></div>
       </div>
     </div>
   </div>
