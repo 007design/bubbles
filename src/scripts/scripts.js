@@ -2,8 +2,8 @@ angular.module('app', ['ngAnimate'])
 .controller('buttonCtrl', function($scope){
   $scope.showButtons = true;
   
-  $scope.circles = [36, 72, 108, 144, 225, 270, 315];
-  $scope.radius = 200;
+  $scope.circles = [90, 36, 270];
+  $scope.radius = 150;
 })
 
 .directive('circle', function(){
@@ -12,10 +12,11 @@ angular.module('app', ['ngAnimate'])
     link: function(scope, elem, attrs, ctrl){
         
       function toRadians (angle) {
-        return angle * Math.PI / 180;
+        return (angle * (Math.PI / 180));
       }
 
       function getPosition(radius, angle){
+        console.log(angle);
         var vals = [ Math.round(radius * Math.cos(toRadians(angle))),
                       Math.round(radius * Math.sin(toRadians(angle))) ];
         return vals;  
@@ -35,7 +36,7 @@ angular.module('app', ['ngAnimate'])
     restrict: 'A',
     link: function(scope, elem, attrs){
       function toRadians (angle) {
-        return angle * Math.PI / 180;
+        return (angle * Math.PI) / 180;
       }
 
       function getPosition(radius, angle){
@@ -49,7 +50,7 @@ angular.module('app', ['ngAnimate'])
       $(elem).css({
         'top': scope.coords[1]*-1+'%',
         'left': scope.coords[0]*-1+'%',
-        'transform': 'rotate('+attrs.line+'deg)'
+        'transform': 'rotate('+(attrs.line)+'deg)'
       });
     }
   };

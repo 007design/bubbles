@@ -1,5 +1,6 @@
 $blue: #00a9e0;
-$size: 100px;
+$size: 50px;
+$radius: 150px;
 
 * {
   box-sizing: border-box;
@@ -17,8 +18,8 @@ $size: 100px;
 
 .circles {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 0;
+  width: 0;
 }
 
 .start-button {
@@ -26,22 +27,26 @@ $size: 100px;
   width: $size;
   transition: 2s linear all;
     
+  .circle{
+    height: 0;
+    width: 0;
+  }
   
   &.active {
     .button {
-      margin: 10px 0 0 10px;
-      height: 80px;
-      width: 80px;
+      margin: 5px 0 0 5px;
+      height: $size - 10px;
+      width: $size - 10px;
     }
   }
 }
 
 .circle {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 50%;
-  left: 50%;
+  height: $radius - $size;
+  width: $radius - $size;
+  top: 0%;
+  left: 0%;
   transform-origin: 50% 50%;
   transition: 0.5s linear all;
   transition-timing-function: ease-in-out;
@@ -54,8 +59,8 @@ $size: 100px;
 
   &.ng-hide-add,
   &.ng-hide-remove.ng-hide-remove-active {
-    height: 100%;
-    width: 100%;
+    height: $radius - $size;
+    width: $radius - $size;
   }
   &.ng-hide-add.ng-hide-add-active {
     height: 0;
@@ -65,10 +70,10 @@ $size: 100px;
 
 .button {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: -50%;
-  left: -50%;
+  height: $size;
+  width: $size;
+  top: -$size/2;
+  left: -$size/2;
   background-color: #fff;
   border-radius: 50%;
   border: 2px solid $blue;
@@ -96,11 +101,11 @@ $size: 100px;
 
   &.ng-hide-add,
   &.ng-hide-remove.ng-hide-remove-active {
-    height: 100%;
-    width: 100%;
+    height: $size;
+    width: $size;
+    top: -$size/2;
+    left: -$size/2;
     font-size: 1em;
-    top: -50%;
-    left: -50%;
   }
   &.ng-hide-add.ng-hide-add-active {
     height: 0;
@@ -117,7 +122,7 @@ $size: 100px;
 
 .line {
   position: absolute;
-  width: $size*2;
+  width: $radius;
   border-top: 2px solid $blue;
   transition:0.5s linear all;
   transition-timing-function: ease-in-out;
@@ -129,7 +134,7 @@ $size: 100px;
 
   &.ng-hide-add,
   &.ng-hide-remove.ng-hide-remove-active {
-    width: $size*2;
+    width: $radius;
   }
   &.ng-hide-add.ng-hide-add-active {
     width: 0;
